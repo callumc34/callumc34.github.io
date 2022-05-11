@@ -3,55 +3,104 @@
     <head>
         <meta charset="utf-8" />
         <title>Callum C</title>
-        <meta name="description" content="Personal page to showcase my projects." />
+        <meta name="description" content="Personal page to showcase my projects" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="author" content="Callum Cooper" />
-        <link rel="stylesheet" href="styles/Default.css" />
+        <meta name="author" content="Callum C" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" integrity="sha256-UXesixbeLkB/UYxVTzuj/gg3+LMzgwAmg3zD+C4ZASQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
-        <div id="Header" class="split34">
-            <div class="left">
-                <h1>Callum Cooper</h1>
-                <p>Aspiring software engineer</p>
+        <div id="header">
+            <ul class="tabs">
+                <li class="tabs-item">
+                    <a href="#home" class="tabs-item-link tabs-item-active">
+                        HOME
+                    </a>
+                </li>
+                <li class="tabs-item">
+                    <a href="#about" class="tabs-item-link">
+                        ABOUT
+                    </a>
+                </li>
+                <li class="tabs-item">
+                    <a href="#projects" class="tabs-item-link">
+                        PROJECTS
+                    </a>
+                </li>
+                <li class="tabs-item">
+                    <a href="#education" class="tabs-item-link">
+                        EDUCATION
+                    </a>
+                </li>
+                <li class="tabs-item">
+                    <a href="#contact" class="tabs-item-link">
+                        CONTACT
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="header-placeholder">
+        </div>
+        <div id="info">
+            <div id="home" class="section">
+                <div class="container ui grid">
+                    <div class="eight wide column">
+                        <h1>Callum Cooper</h1>
+                        <h4>Software developer</h3>
+                        <div id="home-contact">
+                            <ul class="ui list">
+                                <li class="item">
+                                    <a href="mailto:callumc34@hotmail.com" class="content">
+                                        <i class="mail icon large"></i>
+                                        callumc34@hotmail.com
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a class="content">
+                                        <i class="phone icon large"></i>
+                                        028 429 7959
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a class="content" href="https://www.google.com/maps/place/Dunedin/" target="_blank">
+                                        <i class="map pin icon large"></i>
+                                        Dunedin, NZ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="home-links">
+                            <div class="ui horizontal list">
+                                <div class="item">
+                                    <a href="https://github.com/callumc34">
+                                        <i class="github icon large"></i>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://www.linkedin.com/in/callum-cooper-661311230/">
+                                        <i class="linkedin icon large"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <img class="ui fluid rounded image" src="assets/images/home.jpg" />
+                    </div>
+                </div>
             </div>
-            <div class="right" id="Contact">
-                <h2>Email: </h2>
-                <p>
-                    callumc34@hotmail.com
-                </p>
-                <a href="https://github.com/callumc34" target="_blank">
-                    Github: Callumc34
-                </a>
+
+            <div id="about" class="section">
+            </div>
+
+            <div id="projects" class="section">
+            </div>
+
+            <div id="contact" class="section">
             </div>
         </div>
-        <div class="split34">
-            <div class="left">
-                <div class="section" id="About">
-                    <div class="heading">
-                        About Me
-                    </div>
-                    <p>
-                        Hey, I'm Callum and have been coding since about 2015 originally developing a passion for Python.<br>
-                        I then moved on and began developing some old C++ projects using Qt and PySide for GUI development.<br>
-                        Having developed plugins for games like Monster Hunter I then moved onto JS and Web Dev creating sites like this one.<br>
-                        I hope you find my projects useful and or interesting. Feel free to contact me or help out in any projects by making a pull request<br>
-                    </p>
-                </div>
-                <div class="section">
-                    <div class="heading">
-                        Known Languages
-                    </div>
-                    <p>
-                         C++ along with Qt<br>
-                         CMake<br>
-                         Java<br>
-                         Python & Django<br>
-                         JavaScript & Node.js<br>
-                         HTML/CSS<br>
-                    </p>
-                </div>
-            </div>
-            <div class="right" id="Repos">
+        
+            <!--div class="right" id="Repos">
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/callumc34/AudioPlusPlus.svg?link_target=_blank"></object>
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/callumc34/gosb-website.svg?link_target=_blank"></object>
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/callumc34/HunterPie.DiscordHelper.svg?link_target=_blank"></object>
@@ -61,6 +110,15 @@
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/callumc34/OnBeat.svg?link_target=_blank"></object>
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/callumc34/.svg?link_target=_blank"></object>
                 <object type="image/svg+xml" data="https://gh-card.dev/repos/r-nyknicks-moderators/discord-hooks.svg?link_target=_blank"></object>
-                            </div>
+            </div-->
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js" integrity="sha256-CgSoWC9w5wNmI1aN8dIMK+6DPelUEtvDr+Bc2m/0Nx8=" crossorigin="anonymous">
+        </script>
+        <script src="scripts/script.js">
+        </script>
     </body>
 </html>
