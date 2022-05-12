@@ -75,6 +75,8 @@ h5 {
     width: 100%;
 
     z-index: 9;
+
+    transition: all 0.4s ease-out;
 }
 
 #header-placeholder {
@@ -154,6 +156,13 @@ h5 {
 
 .section {
     width: 100vw;
+
+    display: none;
+}
+
+.section h1 {
+    border-bottom: var(--blue) 4px solid;
+    width: fit-content;
 }
 
 .section a {
@@ -163,28 +172,4 @@ h5 {
 
 .section li {
     padding-top: 12px !important;
-}
-
-.container {
-    width: 100%;
-    padding: 0 16px;
-    margin: 0 auto;
-}
-
-@media only screen and (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media only screen and (min-width: 576px) {
-    .container {
-        max-width: 520px;
-    }
 }
