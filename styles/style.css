@@ -3,14 +3,15 @@
 :root {
     --dark:  #121212;
     --dark-grey: #1F1F1F;
-    --header-grey: #3F3F3F;
+    --light-grey: #2A2A2A;
+    --very-light-grey: #3F3F3F;
     --off-white: #FAF0F0;
     --blue: #325EA8;
     --dark-blue: #2C1D78;
 }
 
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     color: var(--off-white);
 }
 
@@ -25,12 +26,15 @@ body {
 }
 
 a {
-    color: var(--off-white);
     transition: all 0.4s ease-out;
+
+    width: fit-content !important;
 }
 
 a:hover {
-    color: var(--blue);
+    color: var(--off-white);
+
+    border-bottom: var(--blue) 2px solid;
 }
 
 i {
@@ -69,7 +73,6 @@ h5 {
 #header {
     padding: 0px;
     margin: 0px;
-    text-align: center;
     background: var(--dark-grey);   
 
     width: 100%;
@@ -88,7 +91,8 @@ h5 {
 #header.scrolled {
     position: fixed;
     top: 0;
-    background: var(--header-grey) !important;
+    background: var(--light-grey) !important;
+    box-shadow: 0 0 48px #000 !important;
 }
 
 #info {
@@ -110,6 +114,39 @@ h5 {
     font-size: 200%;
 }
 
+#home-contact a {
+    color: var(--off-white);
+    border-bottom: none;
+    font-size: 125%;
+}
+
+#home-contact a:hover {
+    color: var(--blue);
+}
+
+#projects-header {
+    padding-left: 12px;
+    margin-bottom: 24px;
+}
+
+#footer {
+    margin-top: 100px;
+    background-color: var(--blue);
+    text-align: center !important;
+}
+
+#footer li:first-child {
+    border-left: none !important;
+}
+
+#footer li {
+    border-left: var(--very-light-grey) 2px solid;
+}
+
+#footer h4 {
+    margin: 0 auto;
+}
+
 .tabs {
     position: relative;
     z-index: 10;
@@ -122,6 +159,10 @@ h5 {
     box-sizing: border-box;
     padding: 20px 0 20px;
     list-style-type: none;
+}
+
+.tabs-item a:hover {
+    border-bottom: none;
 }
 
 .tabs-item-link {
@@ -154,22 +195,82 @@ h5 {
     width: 100%;
 }
 
+.section:first-child {
+    margin-top: 200px;
+}
+
 .section {
     width: 100vw;
+
+    margin-top: 400px;
 
     display: none;
 }
 
-.section h1 {
+.section h1, h2, h3, h4 {
     border-bottom: var(--blue) 4px solid;
     width: fit-content;
 }
 
-.section a {
-    font-size: 125%;
-    width: fit-content !important;
-}
-
 .section li {
     padding-top: 12px !important;
+}
+
+.card {
+    background-color: #0A0A0A !important;
+
+    box-shadow: 0 0 48px #000 !important;
+}
+
+.card div {
+    color: var(--off-white) !important;
+}
+
+.card .header {
+    color: var(--blue) !important;
+}
+
+.card .meta {
+    color:  var(--blue) !important;
+}
+
+.ui.card>.extra, .ui.cards>.card>.extra {
+    border-top: 1px solid rgba(200, 200, 200, 0.1) !important;
+}
+
+.language {
+    padding: 12px !important;
+
+    border-radius: 8px;
+    border: var(--blue) 2px solid;
+
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.language:hover {
+    background-color: var(--blue);
+}
+
+.description {
+    word-wrap: break-word;
+}
+
+.form label, textarea {
+    color: var(--off-white) !important;
+}
+
+.form .field input, textarea {
+    background-color: var(--light-grey) !important;
+}
+
+.button {
+    color: var(--off-white) !important;
+    background-color: var(--light-grey) !important;
+    transition: all 0.4s ease-out !important;
+}
+
+.button:hover {
+    background-color: var(--blue) !important;
+    color: var(--light-grey) !important;
 }

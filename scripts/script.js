@@ -1,5 +1,6 @@
 const scrollHeaderDistance = 100;
 const scrollHomeDistance = 400;
+const scrollAboutDistance = 600;
 
 function checkScroll(distance) {
 	if ($(window).scrollTop() >= distance) return true;
@@ -17,23 +18,6 @@ function changeHeaderColour(e) {
 	}
 }
 
-function transitionSections(e) {
-	if (checkScroll(scrollHomeDistance) && $(home).is(":visible")) {
-		$(home).transition({
-			animation: "fade up",
-			duration: "1000ms",
-			queue: false,
-			onComplete: transitionSections
-		});
-	} else if (!checkScroll(scrollHomeDistance) && !$(home).is(":visible")) {
-		$(home).transition({
-			animation: "fade up",
-			duration: "1000ms",
-			queue: false
-		});
-	}
-}
-
 function switchTab(e) {
 	e.preventDefault();
 		
@@ -45,13 +29,23 @@ function switchTab(e) {
 
 function handleScroll(e) {
 	changeHeaderColour(e);
-	transitionSections(e);
 }
 
 $(document).ready(function() {
 	$(window).scroll(handleScroll);
 	$(".tabs-item-link").click(switchTab);
-	$(home).transition({
+	$('a[href^="#"]').on('click', function(event) {
+
+	  var target = $(this.getAttribute('href'));
+
+	  if (target.length) {
+	    event.preventDefault();
+	    $('html, body').stop().animate({
+	      scrollTop: target.offset().top - 150
+	    }, 1000);
+	  }
+	}); 
+	$(".section").transition({
 		animation: "fade up",
 		duration: "1000ms",
 		queue: false
