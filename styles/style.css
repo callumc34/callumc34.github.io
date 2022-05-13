@@ -11,7 +11,7 @@
 }
 
 * {
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Montserrat", sans-serif;
     color: var(--off-white);
 }
 
@@ -145,6 +145,10 @@ h5 {
 
 #footer h4 {
     margin: 0 auto;
+}
+
+#footer i:hover {
+    color: var(--light-grey);
 }
 
 .tabs {
