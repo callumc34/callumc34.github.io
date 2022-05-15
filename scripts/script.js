@@ -32,6 +32,7 @@ function handleScroll(e) {
 }
 
 $(document).ready(function() {
+	console.log("he");
 	$(window).scroll(handleScroll);
 	$(".tabs-item-link").click(switchTab);
 	$('a[href^="#"]').on('click', function(event) {
@@ -44,10 +45,23 @@ $(document).ready(function() {
 	      scrollTop: target.offset().top - 150
 	    }, 1000);
 	  }
-	}); 
-	$(".section").transition({
-		animation: "fade up",
-		duration: "1000ms",
-		queue: false
 	});
+
+	setTimeout(function() {
+		$(".loader").css({display: "none"});
+
+		$(content).css({display: "block"})
+
+		$(page).transition({
+			animation: "fade up",
+			duration: "1000ms",
+			queue: false
+		});
+
+		$(".section").transition({
+			animation: "fade up",
+			duration: "1000ms",
+			queue: false
+		});
+	}, 1000);
 });

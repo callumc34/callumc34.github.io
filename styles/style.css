@@ -95,6 +95,14 @@ h5 {
     box-shadow: 0 0 48px #000 !important;
 }
 
+#content {
+    display: none;
+}
+
+#page {
+    display: none;
+}
+
 #info {
     margin-top: 140px;
 
@@ -221,9 +229,9 @@ h5 {
 }
 
 .card {
-    background-color: #0A0A0A !important;
+    background-color: var(--light-grey) !important;
 
-    box-shadow: 0 0 48px #000 !important;
+    box-shadow: 0 0 32px #0A0A0A !important;
 }
 
 .card div {
